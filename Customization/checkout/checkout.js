@@ -35,4 +35,17 @@ document.addEventListener('DOMContentLoaded', function() {
         const sub = document.getElementById('customersSub');
         sub.style.display = sub.style.display === 'block' ? 'none' : 'block';
     });
+
+    // Add these new event listeners for the additional dropdowns
+    document.getElementById('storeCustomizationToggle').addEventListener('click', function(e) {
+        e.stopPropagation(); // Prevent the click from bubbling up
+        const sub = document.getElementById('storeCustomizationSub');
+        sub.style.display = sub.style.display === 'block' ? 'none' : 'block';
+    });
+
+    document.getElementById('settingsToggle').addEventListener('click', function(e) {
+        e.stopPropagation(); // Prevent the click from bubbling up
+        const sub = document.getElementById('settingsSub');
+        sub.style.display = sub.style.display === 'block' ? 'none' : 'block';
+    });
 });

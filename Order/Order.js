@@ -194,6 +194,18 @@ document.addEventListener('DOMContentLoaded', function() {
         this.classList.toggle('fa-chevron-up');
     });
 
+     // Add these two new event listeners for the additional toggles
+    document.getElementById('settingsToggle').addEventListener('click', function() {
+        const sub = document.getElementById('settingsSub');
+        sub.style.display = sub.style.display === 'block' ? 'none' : 'block';
+    });
+
+    document.getElementById('storeCustomizationToggle').addEventListener('click', function() {
+        const sub = document.getElementById('storeCustomizationSub');
+        sub.style.display = sub.style.display === 'block' ? 'none' : 'block';
+    });
+   
+
     // Select all checkbox functionality
     document.getElementById('selectAll').addEventListener('change', function() {
         const checkboxes = document.querySelectorAll('tbody input[type="checkbox"]');

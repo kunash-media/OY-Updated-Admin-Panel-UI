@@ -338,6 +338,17 @@ document.addEventListener("DOMContentLoaded", function() {
                 sub.style.display === "block" ? "none" : "block";
         });
 
+         // Add these two new event listeners for the additional toggles
+    document.getElementById('settingsToggle').addEventListener('click', function() {
+        const sub = document.getElementById('settingsSub');
+        sub.style.display = sub.style.display === 'block' ? 'none' : 'block';
+    });
+
+    document.getElementById('storeCustomizationToggle').addEventListener('click', function() {
+        const sub = document.getElementById('storeCustomizationSub');
+        sub.style.display = sub.style.display === 'block' ? 'none' : 'block';
+    });
+
     document.getElementById("saveStaffBtn").addEventListener("click", async function() {
         const staffName = document.getElementById("staffName").value;
         const staffEmail = document.getElementById("staffEmail").value;

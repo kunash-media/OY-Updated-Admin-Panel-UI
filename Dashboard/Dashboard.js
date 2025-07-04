@@ -1,11 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
-
     document.getElementById('menuIcon').addEventListener('click', function() {
         const leftNav = document.getElementById('leftNav');
         leftNav.classList.toggle('active');
         leftNav.style.display = leftNav.style.display === 'block' ? 'none' : 'block';
     });
-
 
     document.getElementById('profileIcon').addEventListener('click', function() {
         const menu = document.getElementById('profileMenu');
@@ -17,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('profileMenu').style.display = 'none';
         }
     });
-
 
     document.getElementById('onlineStoreToggle').addEventListener('click', function() {
         const sub = document.getElementById('onlineStoreSub');
@@ -34,6 +31,93 @@ document.addEventListener('DOMContentLoaded', function() {
         sub.style.display = sub.style.display === 'block' ? 'none' : 'block';
     });
 
+    // Add these two new event listeners for the additional toggles
+    document.getElementById('settingsToggle').addEventListener('click', function() {
+        const sub = document.getElementById('settingsSub');
+        sub.style.display = sub.style.display === 'block' ? 'none' : 'block';
+    });
+
+    document.getElementById('storeCustomizationToggle').addEventListener('click', function() {
+        const sub = document.getElementById('storeCustomizationSub');
+        sub.style.display = sub.style.display === 'block' ? 'none' : 'block';
+    });
+    
+
+    const table = document.querySelector('.recent-orders table tbody');
+    if (!table) return;
+
+    // Generate and populate dummy data
+    const dummyOrders = generateDummyOrders(7); // Generate 7 dummy orders
+    table.innerHTML = ''; // Clear existing static rows
+
+    dummyOrders.forEach(order => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td><input type="checkbox" class="form-check-input row-checkbox"></td>
+            <td>${order.id}</td>
+            <td>${order.date}</td>
+            <td>${order.customer}</td>
+            <td>${order.method}</td>
+            <td>${order.amount}</td>
+            <td><span class="badge ${order.statusClass}">${order.status}</span></td>
+            <td>
+                <div class="dropdown">
+                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                        ${order.status}
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item text-warning" href="#">Pending</a></li>
+                        <li><a class="dropdown-item text-info" href="#">Processing</a></li>
+                        <li><a class="dropdown-item text-success" href="#">Delivered</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item text-danger" href="#">Cancel</a></li>
+                    </ul>
+                </div>
+            </td>
+        `;
+        table.appendChild(row);
+    });
+
+    // Keep your existing table event listener
+    table.addEventListener('click', function(event) {
+        const target = event.target;
+        if (target.classList.contains('dropdown-item')) {
+            event.preventDefault();
+            const selectedStatus = target.textContent.trim();
+
+            const row = target.closest('tr');
+            if (!row) return;
+
+            const statusCell = row.querySelector('td:nth-child(7) span.badge');
+            if (statusCell) {
+                const statusClassMap = {
+                    'Pending': 'bg-warning',
+                    'Processing': 'bg-info',
+                    'Delivered': 'bg-success',
+                    'Cancel': 'bg-danger',
+                    'Cancelled': 'bg-danger'
+                };
+
+                statusCell.className = 'badge';
+                if (statusClassMap[selectedStatus]) {
+                    statusCell.classList.add(statusClassMap[selectedStatus]);
+                } else {
+                    statusCell.classList.add('bg-secondary');
+                }
+
+                statusCell.textContent = selectedStatus;
+            }
+
+            const dropdown = target.closest('.dropdown');
+            if (dropdown) {
+                const button = dropdown.querySelector('button.dropdown-toggle');
+                if (button) {
+                    button.textContent = selectedStatus;
+                }
+            }
+        }
+    });
+    
 
     let lineChart, pieChart;
     initCharts();
@@ -219,3 +303,41 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+function generateDummyOrders(count) {
+    const products = ['Gold Ring', 'Silver Necklace', 'Diamond Earrings', 'Platinum Bracelet', 'Pearl Set'];
+    const customers = ['Mohamed Saed', 'Test Test', 'Test Test1', 'Test Test 2', 'Test3', 'Test4', 'Test5', 'John Doe', 'Jane Smith'];
+    const methods = ['Card', 'Cash', 'Credit'];
+    const statuses = ['Pending', 'Processing', 'Delivered', 'Cancel'];
+    
+    const orders = [];
+    const currentDate = new Date();
+    
+    for (let i = 0; i < count; i++) {
+        const daysAgo = Math.floor(Math.random() * 30);
+        const orderDate = new Date(currentDate);
+        orderDate.setDate(orderDate.getDate() - daysAgo);
+        
+        const hours = Math.floor(Math.random() * 24);
+        const minutes = Math.floor(Math.random() * 60);
+        
+        const formattedDate = `${orderDate.getDate()} ${orderDate.toLocaleString('default', { month: 'short' })}, ${orderDate.getFullYear()} ${hours}:${minutes.toString().padStart(2, '0')} ${hours >= 12 ? 'PM' : 'AM'}`;
+        
+        const amount = (Math.random() * 500 + 50).toFixed(2);
+        const status = statuses[Math.floor(Math.random() * statuses.length)];
+        
+        orders.push({
+            id: `#${11914 + i}`,
+            date: formattedDate,
+            customer: customers[Math.floor(Math.random() * customers.length)],
+            method: methods[Math.floor(Math.random() * methods.length)],
+            amount: `₹${amount}`,
+            status: status,
+            statusClass: status === 'Pending' ? 'bg-warning' : 
+                        status === 'Processing' ? 'bg-info' : 
+                        status === 'Delivered' ? 'bg-success' : 'bg-danger'
+        });
+    }
+    
+    return orders;
+}

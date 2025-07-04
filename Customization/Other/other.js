@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-
-    // Toggle left navigation
+// Toggle left navigation
     document.getElementById('menuIcon').addEventListener('click', function() {
         const leftNav = document.getElementById('leftNav');
         leftNav.style.display = leftNav.style.display === 'block' ? 'none' : 'block';
@@ -37,6 +36,19 @@ document.addEventListener('DOMContentLoaded', function() {
         sub.style.display = sub.style.display === 'block' ? 'none' : 'block';
     });
 
+    // Add these new event listeners for the additional dropdowns
+    document.getElementById('storeCustomizationToggle').addEventListener('click', function(e) {
+        e.stopPropagation(); // Prevent the click from bubbling up
+        const sub = document.getElementById('storeCustomizationSub');
+        sub.style.display = sub.style.display === 'block' ? 'none' : 'block';
+    });
+
+    document.getElementById('settingsToggle').addEventListener('click', function(e) {
+        e.stopPropagation(); // Prevent the click from bubbling up
+        const sub = document.getElementById('settingsSub');
+        sub.style.display = sub.style.display === 'block' ? 'none' : 'block';
+    });
+    
     // Load FAQs, Shipping, and Cancellation data from backend on page load
     loadFAQsFromBackend();
     loadShippingFromBackend();

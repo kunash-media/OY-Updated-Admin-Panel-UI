@@ -63,55 +63,63 @@ async function fetchCustomers() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+
+     // Initialize submenu toggles
+    setupSubmenuToggle('catalogToggle', 'catalogSub');
+    setupSubmenuToggle('customersToggle', 'customersSub');
+    setupSubmenuToggle('onlineStoreToggle', 'onlineStoreSub');
+    setupSubmenuToggle('storeCustomizationToggle', 'storeCustomizationSub');
+    setupSubmenuToggle('settingsToggle', 'settingsSub');
+
+
     // Load customer data on page load
     fetchCustomers();
 
 
-    // Left nav toggle
-    document.getElementById('menuIcon').addEventListener('click', function(e) {
-        e.stopPropagation();
-        const leftNav = document.getElementById('leftNav');
-        leftNav.style.display = leftNav.style.display === 'block' ? 'none' : 'block';
-    });
+    // Left nav toggle - Updated version
+    const menuIcon = document.getElementById('menuIcon');
+    if (menuIcon) {
+        menuIcon.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const leftNav = document.getElementById('leftNav');
+            if (leftNav.style.display === 'none' || !leftNav.style.display) {
+                leftNav.style.display = 'block';
+            } else {
+                leftNav.style.display = 'none';
+            }
+        });
+    }
 
     // Close left nav when clicking outside
     document.addEventListener('click', function(e) {
         if (!e.target.closest('#leftNav') && !e.target.closest('#menuIcon')) {
-            document.getElementById('leftNav').style.display = 'none';
+            const leftNav = document.getElementById('leftNav');
+            if (leftNav) {
+                leftNav.style.display = 'none';
+            }
         }
     });
 
     // Profile menu toggle
-    document.getElementById('profileIcon').addEventListener('click', function(e) {
-        e.stopPropagation();
-        const menu = document.getElementById('profileMenu');
-        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-    });
+    const profileIcon = document.getElementById('profileIcon');
+    if (profileIcon) {
+        profileIcon.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const menu = document.getElementById('profileMenu');
+            if (menu) {
+                menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+            }
+        });
+    }
 
     // Close profile menu when clicking outside
     document.addEventListener('click', function() {
-        document.getElementById('profileMenu').style.display = 'none';
+        const profileMenu = document.getElementById('profileMenu');
+        if (profileMenu) {
+            profileMenu.style.display = 'none';
+        }
     });
-
-    // Submenu toggles
-    document.getElementById('onlineStoreToggle').addEventListener('click', function(e) {
-        e.stopPropagation();
-        const sub = document.getElementById('onlineStoreSub');
-        sub.style.display = sub.style.display === 'block' ? 'none' : 'block';
-    });
-
-    document.getElementById('catalogToggle').addEventListener('click', function(e) {
-        e.stopPropagation();
-        const sub = document.getElementById('catalogSub');
-        sub.style.display = sub.style.display === 'block' ? 'none' : 'block';
-    });
-
-    document.getElementById('customersToggle').addEventListener('click', function(e) {
-        e.stopPropagation();
-        const sub = document.getElementById('customersSub');
-        sub.style.display = sub.style.display === 'block' ? 'none' : 'block';
-    });
-
+    
     // Event delegation for table buttons
     document.addEventListener('click', function(e) {
         // Edit button

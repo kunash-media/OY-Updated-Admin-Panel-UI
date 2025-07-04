@@ -34,33 +34,36 @@
             <span style="margin-left: 10px; font-size: 20px;">Dashboard</span>
         </div>
 
+
         <div class="icons">
             <div class="profile-dropdown">
                 <i class="fas fa-user-circle profile-icon" id="profileIcon"></i>
                 <div class="profile-menu" id="profileMenu" style=" font-family: Open Sans;">
                     <!-- <a href="">Profile</a> -->
-                    <a href="/Login/Login.html">Logout</a>
+                    <a href="../Login/Login.html">Logout</a>
                 </div>
             </div>
         </div>
     </nav>
+
+
     <div class="left-nav" id="leftNav">
         <div class="category" id="catalog">Inventory<i class="fas fa-chevron-down" id="catalogToggle"></i></div>
         <div class="sub-category" id="catalogSub">
-            <a href="/products/Products.html">
+            <a href="../products/Products.html">
                 <div>Products</div>
             </a>
-            <a href="/coupon/Coupon.html">
+            <a href="../coupon/Coupon.html">
                 <div>Coupons</div>
             </a>
         </div>
         <div class="category" id="customers">Customers <i class="fas fa-chevron-down" id="customersToggle"></i></div>
         <div class="sub-category" id="customersSub">
-            <a href="/CustomerDetails/CustomerDetails.html">
+            <a href="../CustomerDetails/CustomerDetails.html">
                 <div>Customer Details</div>
             </a>
         </div>
-        <a href="/Order/Orders.html">
+        <a href="../Order/Orders.html">
             <div class="category">Orders</div>
         </a>
         <div class="category" id="onlineStore">Online Store <i class="fas fa-chevron-down" id="onlineStoreToggle"></i></div>
@@ -69,23 +72,23 @@
                 <div>View Store</div>
             </a>
             <div class="category" id="storeCustomization">Store Customization <i class="fas fa-chevron-down" id="storeCustomizationToggle"></i></div>
-            <div class="sub-category" id="storeCustomizationSub" style="display: none;">
-                <a href="/Customization/Banners/banner.html">
+            <div class="sub-category" id="storeCustomizationSub">
+                <a href="../Customization/Banners/banner.html">
                     <div>Banner</div>
                 </a>
-                <a href="/Customization/AboutUs-Customization/AboutUs-Customization.html">
+                <!-- <a href="../Customization/AboutUs-Customization/AboutUs-Customization.html">
                     <div>About Us</div>
-                </a>
-                <a href="/Customization/checkout/Checkout-Customization.html">
+                </a> -->
+                <a href="../Customization/checkout/Checkout-Customization.html">
                     <div>Checkout</div>
                 </a>
-                <a href="/Customization/contact/Contactus-Customization.html ">
+                <!-- <a href="/Customization/contact/Contactus-Customization.html ">
                     <div>Contact</div>
-                </a>
-                <a href="/Customization/Other/OtherCustomization.html">
+                </a> -->
+                <a href="../Customization/Other/OtherCustomization.html">
                     <div>Other</div>
                 </a>
-                <a href="/Customization/Productcustom/ProductCustomization.html">
+                <a href="../Customization/Productcustom/ProductCustomization.html">
                     <div>Product</div>
                 </a>
                 <!-- <a href="/Customization/SEO/SEO-Customization.html">
@@ -93,19 +96,19 @@
                 </a> -->
             </div>
         </div>
-        <a href="/OurStaff/OurStaff.html">
-            <div class="category ">Our Staff</div>
+        <a href="../OurStaff/OurStaff.html">
+            <div class="category">Our Staff</div>
         </a>
-        <div class="category " id="settings ">Settings <i class="fas fa-chevron-down " id="settingsToggle "></i></div>
-        <div class="sub-category " id="settingsSub " style="display: none; ">
-            <!-- <a href="/Settings/Settings.html ">
+        <div class="category" id="settings">Settings <i class="fas fa-chevron-down" id="settingsToggle"></i></div>
+        <div class="sub-category" id="settingsSub">
+            <!-- <a href="/Settings/Settings.html">
                 <div>General Settings</div>
             </a> -->
-            <a href="/Admin_Details/AdminDetails.html">
+            <a href="../Admin_Details/AdminDetails.html">
                 <div>Admin Details</div>
             </a>
         </div>
-        <button class="logout-button " onclick="window.location.href='login.html' "> <i class="fas fa-sign-out-alt "></i> Logout</button>
+        <button class="logout-button" onclick="window.location.href='login.html'"> <i class="fas fa-sign-out-alt"></i> Logout</button>
     </div>
 
 
@@ -115,31 +118,31 @@
         <div class="card-container" style="font-family: Open Sans;">
 
             <div class="stat-card bg-order-today">
-                <img src="Img/One.gif" alt="Today Orders" style="width: 70px; height: 70px;">
+                <img src="../Img/One.gif" alt="Today Orders" style="width: 70px; height: 70px;">
                 <h6 style="color: rgb(7, 7, 7); font-size: 17px; font-weight: 700;">Today Orders</h6>
                 <p style="color: rgb(9, 9, 9); font-size: 17px; font-weight: 600;">₹23000</p>
             </div>
 
             <div class="stat-card bg-order-yesterday">
-                <img src="Img/Second.gif" alt="Today Orders" style="width: 70px; height: 70px; ">
+                <img src="../Img/Second.gif" alt="Today Orders" style="width: 70px; height: 70px; ">
                 <h6 style="color: rgb(22, 20, 20); font-size: 17px; font-weight: 700;">Yesterday Orders</h6>
                 <p style="color: rgb(23, 19, 19); font-size: 17px; font-weight: 600;">₹24000</p>
             </div>
 
             <div class="stat-card bg-month-sales">
-                <img src="Img/three.gif" alt="Today Orders" style="width: 70px; height: 70px; ">
+                <img src="../Img/three.gif" alt="Today Orders" style="width: 70px; height: 70px; ">
                 <h6 style="color: rgb(23, 21, 21); font-size: 17px; font-weight: 700;">This Month</h6>
                 <p style="color: rgb(8, 6, 6); font-size: 17px; font-weight: 600;">₹560000</p>
             </div>
 
             <div class="stat-card bg-last-month">
-                <img src="Img/Four (3).gif" alt="Today Orders" style="width: 70px; height: 70px; ">
+                <img src="../Img/Four (3).gif" alt="Today Orders" style="width: 70px; height: 70px; ">
                 <h6 style="color:rgb(12, 11, 11) ; font-size: 17px; font-weight: 700;">Last Month</h6>
                 <p style="color: rgb(16, 13, 13); font-size: 17px; font-weight: 600;">₹420000</p>
             </div>
 
             <div class="stat-card bg-all-time">
-                <img src="Img/sales.gif" alt="Today Orders" style="width: 70px; height: 70px; ">
+                <img src="../Img/sales.gif" alt="Today Orders" style="width: 70px; height: 70px; ">
                 <h6 style="color: rgb(35, 29, 29);font-size: 17px; font-weight: 700;">All Time Sales</h6>
                 <p style="color: rgb(36, 32, 32); font-size: 17px; font-weight: 600;">₹4200000</p>
             </div>
@@ -148,25 +151,25 @@
 
         <div class="card-container" style="font-family: Open Sans;">
             <div class="stat-card bg-total-orders" style="height:150px; width: 80px;">
-                <img src="Img/nine.gif " alt="Today Orders" style="width: 70px; height: 70px; ">
+                <img src="../Img/nine.gif " alt="Today Orders" style="width: 70px; height: 70px; ">
                 <h6 style="font-size: 17px; font-weight: 500;">Total Orders</h6>
                 <p style="color: rgb(4, 4, 4); font-size: 20px; font-weight: 600;">966</p>
             </div>
 
             <div class="stat-card bg-order-pending" style="height:150px; width: 80px;">
-                <img src="Img/load.gif" alt="Today Orders" style="width: 70px; height: 70px; ">
+                <img src="../Img/load.gif" alt="Today Orders" style="width: 70px; height: 70px; ">
                 <h6 style="font-size: 17px; font-weight: 500;">Order Pending</h6>
                 <p style="color: rgb(4, 4, 4); font-size: 20px; font-weight: 600;">293</p>
             </div>
 
             <div class="stat-card bg-order-processing" style="height:150px; width: 80px;">
-                <img src="Img/p1.gif" alt="Today Orders" style="width: 70px; height: 70px; ">
+                <img src="../Img/p1.gif" alt="Today Orders" style="width: 70px; height: 70px; ">
                 <h6 style="font-size: 17px; font-weight: 500;">Order Processing</h6>
                 <p style="color: rgb(4, 4, 4); font-size: 20px; font-weight: 600;">129</p>
             </div>
 
             <div class="stat-card bg-order-delivered" style="height:150px; width: 80px;">
-                <img src="Img/truck.gif" alt="Today Orders" style="width: 70px; height: 70px; ">
+                <img src="../Img/truck.gif" alt="Today Orders" style="width: 70px; height: 70px; ">
                 <h6 style="font-size: 17px; font-weight: 500;">Order Delivered</h6>
                 <p style="color: rgb(4, 4, 4); font-size: 20px; font-weight: 600;">293</p>
             </div>
@@ -201,185 +204,11 @@
                             <th>Method</th>
                             <th>Amount</th>
                             <th>Status</th>
-                            <th>Action</th>
+                            <!-- <th>Action</th> -->
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td><input type="checkbox" class="form-check-input row-checkbox"></td>
-                            <td>#11914</td>
-                            <td>2 Apr, 2025 9:08 PM</td>
-                            <td>Mohamed Saed</td>
-                            <td>Card</td>
-                            <td> ₹297.66</td>
-                            <td><span class="badge bg-danger">Cancel</span></td>
-                            <td>
-                                <div class="dropdown">
-                                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                                        Cancel
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item text-warning" href="#">Pending</a></li>
-                                        <li><a class="dropdown-item text-info" href="#">Processing</a></li>
-                                        <li><a class="dropdown-item text-success" href="#">Delivered</a></li>
-                                        <li>
-                                            <hr class="dropdown-divider">
-                                        </li>
-                                        <li><a class="dropdown-item text-danger" href="#">Cancel</a></li>
-                                    </ul>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" class="form-check-input row-checkbox"></td>
-                            <td>#11915</td>
-                            <td>2 Apr, 2025 4:47 PM</td>
-                            <td>Test Test</td>
-                            <td>Cash</td>
-                            <td> ₹75.56</td>
-                            <td><span class="badge bg-success">Delivered</span></td>
-                            <td>
-                                <div class="dropdown">
-                                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                                        Delivered
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item text-warning" href="#">Pending</a></li>
-                                        <li><a class="dropdown-item text-info" href="#">Processing</a></li>
-                                        <li><a class="dropdown-item text-danger" href="#">Cancel</a></li>
-                                        <li>
-                                            <hr class="dropdown-divider">
-                                        </li>
-                                        <li><a class="dropdown-item text-success" href="#">Delivered</a></li>
-                                    </ul>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" class="form-check-input row-checkbox"></td>
-                            <td>#11916</td>
-                            <td>3 Apr, 2025 5:47 PM</td>
-                            <td>Test Test1</td>
-                            <td>Credit</td>
-                            <td> ₹75.56</td>
-                            <td><span class="badge bg-info">Processing</span></td>
-                            <td>
-                                <div class="dropdown">
-                                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                                        Processing
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item text-warning" href="#">Pending</a></li>
-                                        <li><a class="dropdown-item text-danger" href="#">Cancel</a></li>
-                                        <li><a class="dropdown-item text-success" href="#">Delivered</a></li>
-                                        <li>
-                                            <hr class="dropdown-divider">
-                                        </li>
-                                        <li><a class="dropdown-item text-info" href="#">Processing</a></li>
-                                    </ul>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" class="form-check-input row-checkbox"></td>
-                            <td>#11917</td>
-                            <td>4 Apr, 2025 5:50 PM</td>
-                            <td>Test Test 2</td>
-                            <td>Card</td>
-                            <td> ₹75.56</td>
-                            <td><span class="badge bg-warning">Pending</span></td>
-                            <td>
-                                <div class="dropdown">
-                                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                                        Pending
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item text-danger" href="#">Cancel</a></li>
-                                        <li><a class="dropdown-item text-info" href="#">Processing</a></li>
-                                        <li><a class="dropdown-item text-success" href="#">Delivered</a></li>
-                                        <li>
-                                            <hr class="dropdown-divider">
-                                        </li>
-                                        <li><a class="dropdown-item text-warning" href="#">Pending</a></li>
-                                    </ul>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" class="form-check-input row-checkbox"></td>
-                            <td>#11918</td>
-                            <td>5 Apr, 2025 10:08 PM</td>
-                            <td>Test3</td>
-                            <td>Card</td>
-                            <td> ₹297.66</td>
-                            <td><span class="badge bg-danger">Cancel</span></td>
-                            <td>
-                                <div class="dropdown">
-                                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                                        Cancel
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item text-warning" href="#">Pending</a></li>
-                                        <li><a class="dropdown-item text-info" href="#">Processing</a></li>
-                                        <li><a class="dropdown-item text-success" href="#">Delivered</a></li>
-                                        <li>
-                                            <hr class="dropdown-divider">
-                                        </li>
-                                        <li><a class="dropdown-item text-danger" href="#">Cancel</a></li>
-                                    </ul>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" class="form-check-input row-checkbox"></td>
-                            <td>#11919</td>
-                            <td>6 Apr, 2025 5:50 PM</td>
-                            <td>Test 4</td>
-                            <td>Card</td>
-                            <td> ₹75.56</td>
-                            <td><span class="badge bg-warning">Pending</span></td>
-                            <td>
-                                <div class="dropdown">
-                                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                                        Pending
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item text-danger" href="#">Cancel</a></li>
-                                        <li><a class="dropdown-item text-info" href="#">Processing</a></li>
-                                        <li><a class="dropdown-item text-success" href="#">Delivered</a></li>
-                                        <li>
-                                            <hr class="dropdown-divider">
-                                        </li>
-                                        <li><a class="dropdown-item text-warning" href="#">Pending</a></li>
-                                    </ul>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" class="form-check-input row-checkbox"></td>
-                            <td>#11920</td>
-                            <td>9 Apr, 2025 7:47 PM</td>
-                            <td>Test5</td>
-                            <td>Credit</td>
-                            <td> ₹75.56</td>
-                            <td><span class="badge bg-info">Processing</span></td>
-                            <td>
-                                <div class="dropdown">
-                                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                                        Processing
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item text-warning" href="#">Pending</a></li>
-                                        <li><a class="dropdown-item text-danger" href="#">Cancel</a></li>
-                                        <li><a class="dropdown-item text-success" href="#">Delivered</a></li>
-                                        <li>
-                                            <hr class="dropdown-divider">
-                                        </li>
-                                        <li><a class="dropdown-item text-info" href="#">Processing</a></li>
-                                    </ul>
-                                </div>
-                            </td>
-                        </tr>
+                        <!--dynamic data entries-->
                     </tbody>
                 </table>
             </div>

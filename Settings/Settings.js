@@ -3,144 +3,62 @@ document.addEventListener('DOMContentLoaded', function() {
     // Load admin data when page loads
     loadAdminData();
 
-    // Left nav toggle functionality
-    const menuIcon = document.getElementById('menuIcon');
-    const leftNav = document.getElementById('leftNav');
-
-    if (menuIcon && leftNav) {
-        menuIcon.addEventListener('click', function(e) {
-            e.stopPropagation();
-            if (leftNav.style.display === 'block') {
-                leftNav.style.display = 'none';
-            } else {
-                leftNav.style.display = 'block';
-            }
+    document
+        .getElementById("menuIcon")
+        .addEventListener("click", function() {
+            const leftNav = document.getElementById("leftNav");
+            leftNav.style.display =
+                leftNav.style.display === "block" ? "none" : "block";
         });
-    }
 
-    // Close left nav when clicking outside
-    document.addEventListener('click', function(e) {
-        if (leftNav && !e.target.closest('#leftNav') && !e.target.closest('#menuIcon')) {
-            leftNav.style.display = 'none';
-        }
+    document
+        .getElementById("profileIcon")
+        .addEventListener("click", function(e) {
+            e.stopPropagation();
+            const menu = document.getElementById("profileMenu");
+            menu.style.display =
+                menu.style.display === "block" ? "none" : "block";
+        });
+
+    document.addEventListener("click", function() {
+        document.getElementById("profileMenu").style.display = "none";
     });
 
-    // Profile menu toggle
-    const profileIcon = document.getElementById('profileIcon');
-    const profileMenu = document.getElementById('profileMenu');
-
-    if (profileIcon && profileMenu) {
-        profileIcon.addEventListener('click', function(e) {
-            e.stopPropagation();
-            if (profileMenu.style.display === 'block') {
-                profileMenu.style.display = 'none';
-            } else {
-                profileMenu.style.display = 'block';
-            }
+    document
+        .getElementById("onlineStoreToggle")
+        .addEventListener("click", function() {
+            const sub = document.getElementById("onlineStoreSub");
+            sub.style.display =
+                sub.style.display === "block" ? "none" : "block";
         });
-    }
 
-    // Close profile menu when clicking outside
-    document.addEventListener('click', function(e) {
-        if (profileMenu && !e.target.closest('.profile-dropdown')) {
-            profileMenu.style.display = 'none';
-        }
+    document
+        .getElementById("catalogToggle")
+        .addEventListener("click", function() {
+            const sub = document.getElementById("catalogSub");
+            sub.style.display =
+                sub.style.display === "block" ? "none" : "block";
+        });
+
+    document
+        .getElementById("customersToggle")
+        .addEventListener("click", function() {
+            const sub = document.getElementById("customersSub");
+            sub.style.display =
+                sub.style.display === "block" ? "none" : "block";
+        });
+
+         // Add these two new event listeners for the additional toggles
+    document.getElementById('settingsToggle').addEventListener('click', function() {
+        const sub = document.getElementById('settingsSub');
+        sub.style.display = sub.style.display === 'block' ? 'none' : 'block';
     });
 
-    // Inventory/Catalog submenu toggle
-    const catalogToggle = document.getElementById('catalogToggle');
-    const catalogSub = document.getElementById('catalogSub');
+    document.getElementById('storeCustomizationToggle').addEventListener('click', function() {
+        const sub = document.getElementById('storeCustomizationSub');
+        sub.style.display = sub.style.display === 'block' ? 'none' : 'block';
+    });
 
-    if (catalogToggle && catalogSub) {
-        catalogToggle.addEventListener('click', function(e) {
-            e.stopPropagation();
-            if (catalogSub.style.display === 'block') {
-                catalogSub.style.display = 'none';
-                this.classList.remove('fa-chevron-up');
-                this.classList.add('fa-chevron-down');
-            } else {
-                catalogSub.style.display = 'block';
-                this.classList.remove('fa-chevron-down');
-                this.classList.add('fa-chevron-up');
-            }
-        });
-    }
-
-    // Customers submenu toggle
-    const customersToggle = document.getElementById('customersToggle');
-    const customersSub = document.getElementById('customersSub');
-
-    if (customersToggle && customersSub) {
-        customersToggle.addEventListener('click', function(e) {
-            e.stopPropagation();
-            if (customersSub.style.display === 'block') {
-                customersSub.style.display = 'none';
-                this.classList.remove('fa-chevron-up');
-                this.classList.add('fa-chevron-down');
-            } else {
-                customersSub.style.display = 'block';
-                this.classList.remove('fa-chevron-down');
-                this.classList.add('fa-chevron-up');
-            }
-        });
-    }
-
-    // Online Store submenu toggle
-    const onlineStoreToggle = document.getElementById('onlineStoreToggle');
-    const onlineStoreSub = document.getElementById('onlineStoreSub');
-
-    if (onlineStoreToggle && onlineStoreSub) {
-        onlineStoreToggle.addEventListener('click', function(e) {
-            e.stopPropagation();
-            if (onlineStoreSub.style.display === 'block') {
-                onlineStoreSub.style.display = 'none';
-                this.classList.remove('fa-chevron-up');
-                this.classList.add('fa-chevron-down');
-            } else {
-                onlineStoreSub.style.display = 'block';
-                this.classList.remove('fa-chevron-down');
-                this.classList.add('fa-chevron-up');
-            }
-        });
-    }
-
-    // Store Customization submenu toggle
-    const storeCustomizationToggle = document.getElementById('storeCustomizationToggle');
-    const storeCustomizationSub = document.getElementById('storeCustomizationSub');
-
-    if (storeCustomizationToggle && storeCustomizationSub) {
-        storeCustomizationToggle.addEventListener('click', function(e) {
-            e.stopPropagation();
-            if (storeCustomizationSub.style.display === 'block') {
-                storeCustomizationSub.style.display = 'none';
-                this.classList.remove('fa-chevron-up');
-                this.classList.add('fa-chevron-down');
-            } else {
-                storeCustomizationSub.style.display = 'block';
-                this.classList.remove('fa-chevron-down');
-                this.classList.add('fa-chevron-up');
-            }
-        });
-    }
-
-    // Settings submenu toggle
-    const settingsToggle = document.getElementById('settingsToggle');
-    const settingsSub = document.getElementById('settingsSub');
-
-    if (settingsToggle && settingsSub) {
-        settingsToggle.addEventListener('click', function(e) {
-            e.stopPropagation();
-            if (settingsSub.style.display === 'block') {
-                settingsSub.style.display = 'none';
-                this.classList.remove('fa-chevron-up');
-                this.classList.add('fa-chevron-down');
-            } else {
-                settingsSub.style.display = 'block';
-                this.classList.remove('fa-chevron-down');
-                this.classList.add('fa-chevron-up');
-            }
-        });
-    }
 
     // Update button functionality with success popup
     const updateBtn = document.getElementById('updateBtn');

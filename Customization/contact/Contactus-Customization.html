@@ -30,65 +30,67 @@
 </head>
 
 <body>
-    <nav class="navbar">
+<nav class="navbar">
         <div class="dashboard">
             <i class="fas fa-bars menu-icon" id="menuIcon"></i>
             <span style="margin-left: 10px; font-size: 20px;">Dashboard</span>
         </div>
 
+
         <div class="icons">
             <div class="profile-dropdown">
-                <i class="fas fa-user-circle profile-icon" id="profileIcon "></i>
-                <div class="profile-menu" id="profileMenu" style=" font-family: Open Sans; ">
-                    <!-- <a href=" ">Profile</a> -->
-                    <a href="/Login/Login.html ">Logout</a>
+                <i class="fas fa-user-circle profile-icon" id="profileIcon"></i>
+                <div class="profile-menu" id="profileMenu" style=" font-family: Open Sans;">
+                    <!-- <a href="">Profile</a> -->
+                    <a href="../Login/Login.html">Logout</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <div class=" left-nav " id="leftNav ">
-        <div class="category " id="catalog ">Inventory<i class="fas fa-chevron-down " id="catalogToggle "></i></div>
-        <div class="sub-category " id="catalogSub ">
-            <a href="/products/Products.html">
+
+    <div class="left-nav" id="leftNav">
+        <div class="category" id="catalog">Inventory<i class="fas fa-chevron-down" id="catalogToggle"></i></div>
+        <div class="sub-category" id="catalogSub">
+            <a href="../products/Products.html">
                 <div>Products</div>
             </a>
-            <a href="/coupon/Coupon.html">
+            <a href="../coupon/Coupon.html">
                 <div>Coupons</div>
             </a>
         </div>
-        <div class="category " id="customers ">Customers <i class="fas fa-chevron-down " id="customersToggle "></i></div>
-        <div class="sub-category " id="customersSub ">
-            <a href="/CustomerDetails/CustomerDetails.html">
+        <div class="category" id="customers">Customers <i class="fas fa-chevron-down" id="customersToggle"></i></div>
+        <div class="sub-category" id="customersSub">
+            <a href="../CustomerDetails/CustomerDetails.html">
                 <div>Customer Details</div>
             </a>
         </div>
-        <a href="/Order/Orders.html">
-            <div class="category ">Orders</div>
+        <a href="../Order/Orders.html">
+            <div class="category">Orders</div>
         </a>
-        <div class="category " id="onlineStore ">Online Store <i class="fas fa-chevron-down " id="onlineStoreToggle "></i></div>
-        <div class="sub-category " id="onlineStoreSub " style="display: none; ">
+        <div class="category" id="onlineStore">Online Store <i class="fas fa-chevron-down" id="onlineStoreToggle"></i></div>
+        <div class="sub-category" id="onlineStoreSub" style="display: none;">
             <a href="https://jewelry-frontend-six.vercel.app/">
                 <div>View Store</div>
             </a>
-            <div class="category " id="storeCustomization ">Store Customization <i class="fas fa-chevron-down " id="storeCustomizationToggle "></i></div>
-            <div class="sub-category " id="storeCustomizationSub " style="display: none; ">
-                <a href="/Customization/Banners/banner.html">
+            <div class="category" id="storeCustomization">Store Customization <i class="fas fa-chevron-down" id="storeCustomizationToggle"></i></div>
+            <div class="sub-category" id="storeCustomizationSub">
+                <a href="../Customization/Banners/banner.html">
                     <div>Banner</div>
                 </a>
-                <a href="/Customization/AboutUs-Customization/AboutUs-Customization.html">
+                <!-- <a href="../Customization/AboutUs-Customization/AboutUs-Customization.html">
                     <div>About Us</div>
-                </a>
-                <a href="/Customization/checkout/Checkout-Customization.html">
+                </a> -->
+                <a href="../Customization/checkout/Checkout-Customization.html">
                     <div>Checkout</div>
                 </a>
-                <a href="/Customization/contact/Contactus-Customization.html ">
+                <!-- <a href="/Customization/contact/Contactus-Customization.html ">
                     <div>Contact</div>
-                </a>
-                <a href="/Customization/Other/OtherCustomization.html">
+                </a> -->
+                <a href="../Customization/Other/OtherCustomization.html">
                     <div>Other</div>
                 </a>
-                <a href="/Customization/Productcustom/ProductCustomization.html">
+                <a href="../Customization/Productcustom/ProductCustomization.html">
                     <div>Product</div>
                 </a>
                 <!-- <a href="/Customization/SEO/SEO-Customization.html">
@@ -96,191 +98,190 @@
                 </a> -->
             </div>
         </div>
-        <a href="/OurStaff/OurStaff.html">
-            <div class="category ">Our Staff</div>
+        <a href="../OurStaff/OurStaff.html">
+            <div class="category">Our Staff</div>
         </a>
-        <div class="category " id="settings ">Settings <i class="fas fa-chevron-down " id="settingsToggle "></i></div>
-        <div class="sub-category " id="settingsSub " style="display: none; ">
-            <!-- <a href="/Settings/Settings.html ">
+        <div class="category" id="settings">Settings <i class="fas fa-chevron-down" id="settingsToggle"></i></div>
+        <div class="sub-category" id="settingsSub">
+            <!-- <a href="/Settings/Settings.html">
                 <div>General Settings</div>
             </a> -->
-            <a href="/Admin_Details/AdminDetails.html">
+            <a href="../Admin_Details/AdminDetails.html">
                 <div>Admin Details</div>
             </a>
         </div>
-        <button class="logout-button " onclick="window.location.href='login.html'"> <i class="fas fa-sign-out-alt "></i> Logout</button>
+        <button class="logout-button" onclick="window.location.href='login.html'"> <i class="fas fa-sign-out-alt"></i> Logout</button>
     </div>
 
 
-
-    <div class="main-content ">
-        <div class="container-fluid ">
-            <div class="d-flex justify-content-between align-items-center mb-4 ">
-                <h4 class="mb-0 " style="font-size:18px; font-weight: 350; font-family:roboto; ">ContactUS Settings</h4>
-                <button class="btn btn-success ">Update</button>
+    <div class="main-content">
+        <div class="container-fluid">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h4 class="mb-0 " style="font-size:18px; font-weight: 350; font-family:roboto;">ContactUS Settings</h4>
+                <button class="btn btn-success">Update</button>
             </div>
 
             <!-- Banner1 Section -->
-            <div class="card mb-4 ">
-                <div class="card-body ">
-                    <h5 class="card-title ">Banner1</h5>
-                    <div class="mb-3 ">
-                        <label for="bannerImage " class="form-label ">Banner Image (Image/Video)</label>
-                        <input type="file " class="form-control " id="bannerImage " accept="image/*,video/* ">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Banner1</h5>
+                    <div class="mb-3">
+                        <label for="bannerImag" class="form-label">Banner Image (Image/Video)</label>
+                        <input type="file" class="form-control" id="bannerImage " accept="image/*,video/*">
                     </div>
-                    <div class="mb-3 ">
-                        <label for="bannerHeading " class="form-label ">Banner Heading</label>
-                        <input type="text " class="form-control " id="bannerHeading ">
+                    <div class="mb-3">
+                        <label for="bannerHeading" class="form-label">Banner Heading</label>
+                        <input type="text" class="form-control" id="bannerHeading">
                     </div>
-                    <div class="mb-3 ">
-                        <label for="bannerText " class="form-label ">Banner Text</label>
-                        <textarea class="form-control " id="bannerText " rows="3 "></textarea>
+                    <div class="mb-3">
+                        <label for="bannerText" class="form-label">Banner Text</label>
+                        <textarea class="form-control" id="bannerText" rows="3"></textarea>
                     </div>
                 </div>
             </div>
 
-            <hr class="my-4 ">
+            <hr class="my-4">
 
             <!-- Get In Touch Section -->
-            <div class="card mb-4 ">
-                <div class="card-body ">
-                    <h5 class="card-title ">Get In Touch</h5>
-                    <h6 class="card-subtitle mb-3 ">Card</h6>
-                    <div class="mb-3 ">
-                        <label for="cardIconImage " class="form-label ">Card Icon Image</label>
-                        <input type="file " class="form-control " id="cardIconImage " accept="image/* ">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Get In Touch</h5>
+                    <h6 class="card-subtitle mb-3">Card</h6>
+                    <div class="mb-3">
+                        <label for="cardIconImage" class="form-label">Card Icon Image</label>
+                        <input type="file" class="form-control" id="cardIconImage" accept="image/*">
                     </div>
-                    <div class="mb-3 ">
-                        <label for="cardHeading " class="form-label ">Card Heading</label>
-                        <input type="text " class="form-control " id="cardHeading ">
+                    <div class="mb-3">
+                        <label for="cardHeading" class="form-label">Card Heading</label>
+                        <input type="text" class="form-control" id="cardHeading">
                     </div>
-                    <div class="mb-3 ">
-                        <label for="cardText1 " class="form-label ">Card Text1</label>
-                        <input type="text " class="form-control " id="cardText1 ">
+                    <div class="mb-3">
+                        <label for="cardText1" class="form-label">Card Text1</label>
+                        <input type="text" class="form-control" id="cardText1">
                     </div>
-                    <div class="mb-3 ">
-                        <label for="cardText2 " class="form-label ">Card Text2</label>
-                        <input type="text " class="form-control " id="cardText2 ">
+                    <div class="mb-3">
+                        <label for="cardText2" class="form-label">Card Text2</label>
+                        <input type="text" class="form-control" id="cardText2">
                     </div>
-                    <button class="btn btn-primary mt-2 ">Add Another Card</button>
+                    <button class="btn btn-primary mt-2">Add Another Card</button>
                 </div>
             </div>
 
-            <hr class="my-4 ">
+            <hr class="my-4">
 
             <!-- Send Us a Message Section -->
-            <div class="card mb-4 ">
-                <div class="card-body ">
-                    <h5 class="card-title ">Send Us a Message</h5>
-                    <div class="mb-3 ">
-                        <label for="contactName " class="form-label ">Name</label>
-                        <input type="text " class="form-control " id="contactName ">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Send Us a Message</h5>
+                    <div class="mb-3">
+                        <label for="contactName" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="contactName">
                     </div>
-                    <div class="mb-3 ">
-                        <label for="contactEmail " class="form-label ">Email</label>
-                        <input type="email " class="form-control " id="contactEmail ">
+                    <div class="mb-3">
+                        <label for="contactEmail" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="contactEmail">
                     </div>
-                    <div class="mb-3 ">
-                        <label for="contactPhone " class="form-label ">Phone</label>
-                        <input type="tel " class="form-control " id="contactPhone ">
+                    <div class="mb-3">
+                        <label for="contactPhone" class="form-label">Phone</label>
+                        <input type="tel" class="form-control" id="contactPhone">
                     </div>
-                    <div class="mb-3 ">
-                        <label for="contactMessage " class="form-label ">How Can We Help?</label>
-                        <textarea class="form-control " id="contactMessage " rows="3 "></textarea>
+                    <div class="mb-3">
+                        <label for="contactMessage" class="form-label">How Can We Help?</label>
+                        <textarea class="form-control" id="contactMessage" rows="3"></textarea>
                     </div>
-                    <button class="btn btn-primary ">Add Form Element</button>
+                    <button class="btn btn-primary">Add Form Element</button>
                 </div>
             </div>
 
             <hr class="my-4 ">
 
             <!-- FAQ Section -->
-            <div class="card mb-4 ">
-                <div class="card-body ">
-                    <h5 class="card-title ">Frequently Asked Questions</h5>
-                    <div class="mb-3 ">
-                        <label for="question1 " class="form-label ">Question1</label>
-                        <input type="text " class="form-control " id="question1 ">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Frequently Asked Questions</h5>
+                    <div class="mb-3">
+                        <label for="question1" class="form-label">Question1</label>
+                        <input type="text" class="form-control" id="question1">
                     </div>
-                    <div class="mb-3 ">
-                        <label for="answer1 " class="form-label ">Answer</label>
-                        <textarea class="form-control " id="answer1 " rows="3 "></textarea>
+                    <div class="mb-3">
+                        <label for="answer1" class="form-label">Answer</label>
+                        <textarea class="form-control" id="answer1" rows="3"></textarea>
                     </div>
-                    <button class="btn btn-primary ">Add Question & Answer</button>
+                    <button class="btn btn-primary">Add Question & Answer</button>
                 </div>
             </div>
-            <hr class="my-4 ">
+            <hr class="my-4">
 
             <!-- Footer Section -->
-            <div class="card mb-4 ">
-                <div class="card-header ">
+            <div class="card mb-4">
+                <div class="card-header">
                     <h5>Footer</h5>
                 </div>
-                <div class="card-body ">
+                <div class="card-body">
                     <h5>Logo</h5>
-                    <div class="mb-3 ">
-                        <label class="form-label ">Logo Image</label>
-                        <input type="file " class="form-control " accept="image/* ">
+                    <div class="mb-3">
+                        <label class="form-label">Logo Image</label>
+                        <input type="file" class="form-control" accept="image/*">
                     </div>
 
-                    <h5 class="mt-4 ">Shop</h5>
-                    <div class="row mb-2 " id="shopLinks ">
-                        <div class="col-md-5 ">
-                            <input type="text " class="form-control mb-2 " placeholder="Text1 ">
+                    <h5 class="mt-4">Shop</h5>
+                    <div class="row mb-2" id="shopLinks">
+                        <div class="col-md-5">
+                            <input type="text" class="form-control mb-2" placeholder="Text1">
                         </div>
-                        <div class="col-md-5 ">
-                            <input type="url " class="form-control mb-2 " placeholder="URL1 ">
+                        <div class="col-md-5">
+                            <input type="url" class="form-control mb-2" placeholder="URL1">
                         </div>
-                        <div class="col-md-2 ">
-                            <button class="btn btn-primary " onclick="addLinkField( 'shopLinks') ">Add</button>
-                        </div>
-                    </div>
-
-                    <h5 class="mt-4 ">Company</h5>
-                    <div class="row mb-2 " id="companyLinks ">
-                        <div class="col-md-5 ">
-                            <input type="text " class="form-control mb-2 " placeholder="Text1 ">
-                        </div>
-                        <div class="col-md-5 ">
-                            <input type="url " class="form-control mb-2 " placeholder="URL1 ">
-                        </div>
-                        <div class="col-md-2 ">
-                            <button class="btn btn-primary " onclick="addLinkField( 'companyLinks') ">Add</button>
+                        <div class="col-md-2">
+                            <button class="btn btn-primary" onclick="addLinkField( 'shopLinks')">Add</button>
                         </div>
                     </div>
 
-                    <h5 class="mt-4 ">Legal</h5>
-                    <div class="row mb-2 " id="legalLinks ">
-                        <div class="col-md-5 ">
-                            <input type="text " class="form-control mb-2 " placeholder="Text1 ">
+                    <h5 class="mt-4">Company</h5>
+                    <div class="row mb-2" id="companyLinks ">
+                        <div class="col-md-5">
+                            <input type="text" class="form-control mb-2" placeholder="Text1">
                         </div>
-                        <div class="col-md-5 ">
-                            <input type="url " class="form-control mb-2 " placeholder="URL1 ">
+                        <div class="col-md-5">
+                            <input type="url" class="form-control mb-2" placeholder="URL1">
                         </div>
-                        <div class="col-md-2 ">
-                            <button class="btn btn-primary " onclick="addLinkField( 'legalLinks') ">Add</button>
-                        </div>
-                    </div>
-
-                    <h5 class="mt-4 ">Follow</h5>
-                    <div class="row mb-2 " id="socialIcons ">
-                        <div class="col-md-5 ">
-                            <input type="file " class="form-control mb-2 " accept="image/* " placeholder="Icon ">
-                        </div>
-                        <div class="col-md-5 ">
-                            <input type="url " class="form-control mb-2 " placeholder="Social Link ">
-                        </div>
-                        <div class="col-md-2 ">
-                            <button class="btn btn-primary " onclick="addLinkField( 'socialIcons') ">Add</button>
+                        <div class="col-md-2">
+                            <button class="btn btn-primary" onclick="addLinkField( 'companyLinks')">Add</button>
                         </div>
                     </div>
 
-                    <h5 class="mt-4 ">Below Footer</h5>
-                    <div class="mb-3 ">
-                        <label class="form-label ">Footer Text</label>
-                        <textarea class="form-control " rows="2 "></textarea>
+                    <h5 class="mt-4">Legal</h5>
+                    <div class="row mb-2" id="legalLinks">
+                        <div class="col-md-5">
+                            <input type="text" class="form-control mb-2" placeholder="Text1">
+                        </div>
+                        <div class="col-md-5">
+                            <input type="url" class="form-control mb-2" placeholder="URL1">
+                        </div>
+                        <div class="col-md-2">
+                            <button class="btn btn-primary" onclick="addLinkField( 'legalLinks')">Add</button>
+                        </div>
                     </div>
-                    <button class="btn btn-primary ">Add</button>
+
+                    <h5 class="mt-4">Follow</h5>
+                    <div class="row mb-2" id="socialIcons">
+                        <div class="col-md-5">
+                            <input type="file" class="form-control mb-2" accept="image/*" placeholder="Icon">
+                        </div>
+                        <div class="col-md-5">
+                            <input type="url" class="form-control mb-2" placeholder="Social Link">
+                        </div>
+                        <div class="col-md-2">
+                            <button class="btn btn-primary" onclick="addLinkField( 'socialIcons')">Add</button>
+                        </div>
+                    </div>
+
+                    <h5 class="mt-4">Below Footer</h5>
+                    <div class="mb-3">
+                        <label class="form-label">Footer Text</label>
+                        <textarea class="form-control" rows="2"></textarea>
+                    </div>
+                    <button class="btn btn-primary">Add</button>
                 </div>
             </div>
         </div>
