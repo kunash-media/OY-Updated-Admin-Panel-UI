@@ -702,7 +702,7 @@ async function saveSingleShipping(button) {
 }
 
 // =============================
-// CANCELLATION BACKEND FUNCTIONS (NEW)
+// CANCELLATION BACKEND FUNCTIONS (UPDATED TO MATCH YOUR CONTROLLER)
 // =============================
 
 // Function to load cancellation data from backend
@@ -710,7 +710,8 @@ async function loadCancellationFromBackend() {
     try {
         showLoading('cancellationContainer');
 
-        const response = await fetch(`${CANCELLATION_API_BASE_URL}/get-All-cancellation`);
+        // Updated endpoint to match your controller
+        const response = await fetch(`${CANCELLATION_API_BASE_URL}/get-All-Cancellations`);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -806,7 +807,8 @@ async function saveAllCancellationToBackend() {
 // Function to create cancellation in backend
 async function createCancellationInBackend(cancellationData) {
     try {
-        const response = await fetch(`${CANCELLATION_API_BASE_URL}/create-cancellation`, {
+        // Updated endpoint to match your controller
+        const response = await fetch(`${CANCELLATION_API_BASE_URL}/Create-Cancellation`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -897,17 +899,18 @@ async function deleteCancellation(id) {
     }
 }
 
-// Function to search cancellation by title
+// Function to search cancellation by title (removed since no search endpoint in controller)
 async function searchCancellationByTitle(title) {
     if (!title.trim()) {
         loadCancellationFromBackend();
         return;
     }
 
+    // Since there's no search endpoint in your controller, we'll filter locally
     try {
         showLoading('cancellationContainer');
 
-        const response = await fetch(`${CANCELLATION_API_BASE_URL}/search?title=${encodeURIComponent(title)}`);
+        const response = await fetch(`${CANCELLATION_API_BASE_URL}/get-All-Cancellations`);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -915,7 +918,12 @@ async function searchCancellationByTitle(title) {
         const cancellations = await response.json();
         hideLoading('cancellationContainer');
 
-        populateCancellationFromBackend(cancellations);
+        // Filter cancellations by title locally
+        const filteredCancellations = cancellations.filter(cancellation => 
+            cancellation.title && cancellation.title.toLowerCase().includes(title.toLowerCase())
+        );
+
+        populateCancellationFromBackend(filteredCancellations);
 
     } catch (error) {
         hideLoading('cancellationContainer');
@@ -958,7 +966,6 @@ async function saveSingleCancellation(button) {
         showError('Failed to save cancellation item. Please try again.', 'cancellationContainer');
     }
 }
-
 // =============================
 // OVERLAY FUNCTIONS (EXISTING)
 // =============================
